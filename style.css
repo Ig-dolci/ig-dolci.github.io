@@ -58,7 +58,7 @@ nav .container {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
     color: white;
     padding: 150px 0 100px;
     text-align: center;
@@ -114,7 +114,7 @@ nav .container {
 }
 
 .research-item h3 {
-    color: #667eea;
+    color: #2563eb;
     margin-bottom: 1rem;
 }
 
@@ -145,7 +145,7 @@ nav .container {
 
 .btn {
     display: inline-block;
-    background: #667eea;
+    background: #2563eb;
     color: white;
     padding: 0.5rem 1.5rem;
     text-decoration: none;
@@ -154,12 +154,12 @@ nav .container {
 }
 
 .btn:hover {
-    background: #764ba2;
+    background: #1e40af;
 }
 
 /* Contact Section */
 #contact a {
-    color: #667eea;
+    color: #2563eb;
     text-decoration: none;
 }
 
