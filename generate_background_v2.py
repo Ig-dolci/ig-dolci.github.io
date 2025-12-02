@@ -11,8 +11,8 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Circle
 from matplotlib.tri import Triangulation
 
-# Set dimensions to match typical browser aspect ratio (wider)
-fig = plt.figure(figsize=(24, 10), dpi=200)
+# Set dimensions for extra-wide display (3:1 aspect ratio)
+fig = plt.figure(figsize=(36, 12), dpi=200)
 ax = plt.gca()
 
 # Create sophisticated multi-layer gradient background
@@ -54,26 +54,7 @@ for bounds, n_pts in mesh_regions:
     triang = Triangulation(mesh_x, mesh_y)
     ax.triplot(triang, color='white', linewidth=0.6, alpha=0.12, linestyle='-')
 
-# Add gradient flow field - more sophisticated pattern
-Y_grid, X_grid = np.mgrid[0.8:9.2:12j, 0.8:9.2:12j]
-
-# Create vortex-like flow pattern (typical in CFD)
-center_flow = np.array([5.0, 5.0])
-dx = X_grid - center_flow[0]
-dy = Y_grid - center_flow[1]
-r = np.sqrt(dx**2 + dy**2) + 0.1
-
-# Spiral flow pattern
-U = -dy / r * np.exp(-r / 4)
-V = dx / r * np.exp(-r / 4)
-
-# Add gradient component
-U += -0.15 * dx
-V += -0.15 * dy
-
-ax.quiver(X_grid, Y_grid, U, V,
-          color='white', alpha=0.15, width=0.004,
-          scale=12, headwidth=3.5, headlength=4.5)
+# Vector field removed for cleaner design
 
 # Add elegant mathematical annotations with better positioning
 equations = [
