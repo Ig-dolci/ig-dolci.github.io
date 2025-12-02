@@ -11,8 +11,8 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Circle
 from matplotlib.tri import Triangulation
 
-# Set high resolution for crisp output
-fig = plt.figure(figsize=(19.2, 10.8), dpi=200)
+# Set dimensions to match typical browser aspect ratio (wider)
+fig = plt.figure(figsize=(24, 10), dpi=200)
 ax = plt.gca()
 
 # Create sophisticated multi-layer gradient background
@@ -37,20 +37,6 @@ radial_factor = 1 - 0.15 * np.exp(-radial * 3)
 
 background = np.dstack([R * radial_factor, G * radial_factor, B * radial_factor])
 ax.imshow(background, extent=[0, 10, 0, 10], aspect='auto', alpha=1.0)
-
-# Add elegant wave patterns with varying opacity and thickness
-t = np.linspace(0, 10, 2000)
-wave_configs = [
-    (1.8, 0, 0.20, 2.5, 5.0),
-    (2.4, np.pi/3, 0.18, 2.0, 4.5),
-    (3.2, np.pi/2, 0.15, 1.8, 5.5),
-    (2.0, np.pi, 0.12, 2.2, 6.0),
-    (3.8, 3*np.pi/4, 0.10, 1.5, 4.0)
-]
-
-for freq, phase, alpha_val, lw, offset in wave_configs:
-    y_wave = offset + 1.2 * np.sin(freq * t + phase) + 0.3 * np.sin(freq * 2 * t)
-    ax.plot(t, y_wave, 'white', linewidth=lw, alpha=alpha_val, solid_capstyle='round')
 
 # Create elegant finite element mesh - structured regions
 np.random.seed(42)
