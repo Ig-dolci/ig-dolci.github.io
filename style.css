@@ -170,15 +170,8 @@ nav .container {
     background: #1e40af;
 }
 
-/* About Section Layout */
-.about-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    margin-top: 2rem;
-}
-
-.about-text p {
+/* About Section */
+#about p {
     margin-bottom: 1.5rem;
     line-height: 1.8;
 }
@@ -189,9 +182,10 @@ nav .container {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     border: 1px solid #e0e0e0;
-    height: fit-content;
-    position: sticky;
-    top: 100px;
+    margin-top: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-box h3 {
@@ -206,13 +200,12 @@ nav .container {
 }
 
 .contact-list li {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .contact-list strong {
     color: #2c3e50;
-    display: block;
-    margin-bottom: 0.3rem;
+    margin-right: 0.5rem;
 }
 
 .contact-list a {
@@ -300,15 +293,5 @@ footer {
     
     .research-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .contact-box {
-        position: relative;
-        top: 0;
     }
 }
