@@ -20,10 +20,10 @@ x = np.linspace(0, 1, 200)
 y = np.linspace(0, 1, 200)
 X, Y = np.meshgrid(x, y)
 
-# Define color palette - rich blues with depth
-color_dark = np.array([25, 55, 180]) / 255  # Deep blue
-color_mid = np.array([37, 99, 235]) / 255   # #2563eb
-color_light = np.array([14, 165, 233]) / 255  # #0ea5e9
+# Define color palette - dark teal to turquoise
+color_dark = np.array([15, 76, 92]) / 255   # Deep ocean teal
+color_mid = np.array([20, 184, 166]) / 255  # Teal
+color_light = np.array([94, 234, 212]) / 255  # Bright turquoise
 
 # Create layered gradient with radial influences
 R = (color_dark[0] * (1 - Y) + color_light[0] * Y) * (1 - 0.2 * X)
@@ -161,7 +161,7 @@ plt.savefig('hero-background.png', dpi=200, bbox_inches='tight',
             pad_inches=0, facecolor='none', edgecolor='none',
             transparent=True)
 plt.savefig('hero-background.jpg', dpi=200, bbox_inches='tight',
-            pad_inches=0, facecolor='#1937b4', edgecolor='none')
+            pad_inches=0, facecolor='#0f4c5c', edgecolor='none')
 plt.close()
 
 print("✓ High-quality background images generated successfully!")
